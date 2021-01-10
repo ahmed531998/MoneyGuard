@@ -21,6 +21,7 @@ while(True):
     elif cmd == 'stream1':
         stream('stream.txt', 1)
     elif cmd == 'quit':
+        jvm.stop()
         break
     else:
         print("Sorry, we didn't recognize the command, can you type it correctly? Use help to check the right syntax!")

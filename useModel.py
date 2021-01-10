@@ -9,7 +9,7 @@ from weka.filters import Filter
 import weka.core.dataset as ds
 import numpy as np
 import os
-
+import threading
 
 def loadModel(modelPath):
     model = Classifier(jobject=sr.read(modelPath))
@@ -21,6 +21,8 @@ def loadFilter(filterPath):
 
 
 def stringToInstance(string):
+    lock = threading.Lock()
+    lock.acquire()
     with open('step.arff', 'a') as f:
         f.write('\n')
         f.write(string)
@@ -39,14 +41,17 @@ def stringToInstance(string):
         if pos > 0:
             file.seek(pos, os.SEEK_SET)
             file.truncate()
+    lock.release()
     return data
 
 
 def appendToDataSet(instance):
-    with open('fraud.arff', 'a') as f:
+    lock = threading.Lock()
+    lock.acquire()
+    with open('dataSources/fraud.arff', 'a') as f:
         f.write('\n')
         f.write(instance)
-
+    lock.release()
 
 
 #THIS IS THE PART FOR PROCESSING AND CLASSIFYING ONE INSTANCE, WE HAVE TO SAVE THE FILTERS TRAINED IN "preprocess"
@@ -54,19 +59,19 @@ def appendToDataSet(instance):
 #THEN, FOR THE STREAM, WE JUST HAVE TO CALL "classifyOne" FOR EACH ENTRY OF THE FILE WE GET
 def preprocess(data):
     data.class_is_last()
-    discretizer = loadFilter('discretizer')
-    remover = loadFilter('remover')
-    stn = loadFilter('stn')
+    discretizer = loadFilter('filters/discretizer')
+    stn = loadFilter('filters/stn')
+    remover = loadFilter('filters/remover')
     # discretize age
     discData = discretizer.filter(data)
-    newData = remover.filter(discData)
-    convData = stn.filter(newData)
-    return convData
+    convData = stn.filter(discData)
+    newData = remover.filter(convData)
+    return newData
 
 
 def stream(file, option):
     jvm.start(packages=True)
-    hoeffding = loadModel('HoeffdingTree.model')
+    hoeffding = loadModel('models/HoeffdingTree.model')
     f = open(file, 'r')
     while True:
         line = f.readline()
@@ -79,7 +84,7 @@ def stream(file, option):
             hoeffding = retrainOneInc(line.strip(), hoeffding)
             print('Stream retrain end at: ', datetime.now().time())
     f.close()
-    sr.write('HoeffdingTree.model', hoeffding)
+    sr.write('models/HoeffdingTree.model', hoeffding)
 
 
 def retrainOneInc(string, classifier):
@@ -93,7 +98,7 @@ def classifyOne(string=None,classifier=None):
     jvm.start(packages=True)
 
     if not classifier:
-        classifier = loadModel('randomForest.model')
+        classifier = loadModel('models/randomForest.model')
 
     if not string:
         print('Copy your transaction informations here! Please, use a comma separated list!')
