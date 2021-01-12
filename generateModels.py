@@ -154,6 +154,7 @@ def main():
         password = input('')
         if password.strip() == 'DMMLproject':
             print("All good!")
+            break
         else:
             if x == 2:
                 print("This command is protected and can be used only by an administrator, please use another command.")
