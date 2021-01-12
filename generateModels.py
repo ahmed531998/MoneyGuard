@@ -148,6 +148,18 @@ def classify(data, classifier, cv, modelPath, folds=10, splitPerc=70, randomSeed
 
 def main():
     jvm.start(packages=True, max_heap_size="4g")
+    
+    print("Hi! This is a protected command, please insert the password to proceed!")
+    for x in range(3):
+        password = input('')
+        if password.strip() == 'DMMLproject':
+            print("All good!")
+        else:
+            if x == 2:
+                print("This command is protected and can be used only by an administrator, please use another command.")
+                return
+            else:
+                print("Wrong password, please provide the correct password")
 
     loader = Loader(classname="weka.core.converters.ArffLoader")
     data = loader.load_file("dataSources/fraud.arff")
