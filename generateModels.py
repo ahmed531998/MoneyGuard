@@ -148,7 +148,7 @@ def classify(data, classifier, cv, modelPath, folds=10, splitPerc=70, randomSeed
 
 def main():
     jvm.start(packages=True, max_heap_size="4g")
-    
+
     print("Hi! This is a protected command, please insert the password to proceed!")
     for x in range(3):
         password = input('')
@@ -224,7 +224,7 @@ def main():
     # Hoeffding tree - cross validate - traintestSplit
     # print("----------HoeffdingTree----------")
     # classify(preProcessedData,base5,True,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
-    # classify(preProcessedData,base5,False,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
+    #classify(preProcessedData,base5,False,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
 
     # K-Nearest-Neighbours - cross validate - traintestSplit
     # print("----------KNN----------")

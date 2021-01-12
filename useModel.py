@@ -53,10 +53,14 @@ def appendToDataSet(instance):
         f.write(instance)
     lock.release()
 
+def addFraud(string):
+    lock = threading.Lock()
+    lock.acquire()
+    with open('fraudTrans.txt', 'a') as f:
+        f.write('\n')
+        f.write(string)
+    lock.release()
 
-#THIS IS THE PART FOR PROCESSING AND CLASSIFYING ONE INSTANCE, WE HAVE TO SAVE THE FILTERS TRAINED IN "preprocess"
-#ABOVE AND USE THEM HERE
-#THEN, FOR THE STREAM, WE JUST HAVE TO CALL "classifyOne" FOR EACH ENTRY OF THE FILE WE GET
 def preprocess(data):
     data.class_is_last()
     discretizer = loadFilter('filters/discretizer')
@@ -71,6 +75,22 @@ def preprocess(data):
 
 def stream(file, option):
     jvm.start(packages=True)
+
+    if option == 1:
+        print("Hi! This is a protected command, please insert the password to proceed!")
+        for x in range(3):
+            password = input('')
+            if password.strip() == 'DMMLproject':
+                print("All good!")
+                break
+            else:
+                if x == 2:
+                    print(
+                        "This command is protected and can be used only by an administrator, please use another command.")
+                    return
+                else:
+                    print("Wrong password, please provide the correct password")
+
     hoeffding = loadModel('models/HoeffdingTree.model')
     f = open(file, 'r')
     while True:
@@ -80,9 +100,9 @@ def stream(file, option):
         if option == 0:
             classifyOne(line.strip(), hoeffding)
         else:
-            print('Stream retrain start at: ', datetime.now().time())
+            print('Stream update start at: ', datetime.now().time())
             hoeffding = retrainOneInc(line.strip(), hoeffding)
-            print('Stream retrain end at: ', datetime.now().time())
+            print('Stream update end at: ', datetime.now().time())
     f.close()
     sr.write('models/HoeffdingTree.model', hoeffding)
 
@@ -95,9 +115,8 @@ def retrainOneInc(string, classifier):
     return classifier
 
 def classifyOne(string=None,classifier=None):
-    jvm.start(packages=True)
-
     if not classifier:
+        jvm.start(packages=True)
         classifier = loadModel('models/randomForest.model')
 
     if not string:
@@ -108,11 +127,11 @@ def classifyOne(string=None,classifier=None):
     preProcessedData = preprocess(data)
     result = classifier.classify_instance(preProcessedData.get_instance(0))
     final = int(result)
-    if final == 0:
-        print("The transaction is safe!")
-    else:
-        print("ATTENTION! The transaction seems to be a scam, contact your bank and let them know!")
-
     toUpdate = string[:-1]
     toUpdate += str(final)
     appendToDataSet(toUpdate)
+    if final == 0:
+        print("The transaction is safe!")
+    else:
+        print("ATTENTION!\n The transaction seems to be a scam, contact your bank and let them know!")
+        addFraud(toUpdate)
