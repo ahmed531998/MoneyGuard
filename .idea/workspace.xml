@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b23413-56c0-4cb0-b8f3-b5bbb5c1c76e" name="Default Changelist" comment="Added Stream">
+    <list default="true" id="55b23413-56c0-4cb0-b8f3-b5bbb5c1c76e" name="Default Changelist" comment="fixup! UseCase + Semi-random stream generator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generateModels.py" beforeDir="false" afterPath="$PROJECT_DIR$/generateModels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/useModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/useModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stream.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stream.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -254,7 +253,8 @@
       <workItem from="1610294897081" duration="980000" />
       <workItem from="1610297158965" duration="5524000" />
       <workItem from="1610303712126" duration="4592000" />
-      <workItem from="1610309991796" duration="10015000" />
+      <workItem from="1610309991796" duration="11783000" />
+      <workItem from="1610504429970" duration="1523000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stream">
       <created>1610216790085</created>
@@ -270,18 +270,75 @@
       <option name="project" value="LOCAL" />
       <updated>1610216918615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Plotting, file lock, attribute selection display, access attribute by name.">
+      <created>1610320559673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610320559673</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Plots">
+      <created>1610320806200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610320806200</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Filters">
+      <created>1610320855529</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610320855529</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Models">
+      <created>1610320945493</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610320945493</updated>
+    </task>
+    <task id="LOCAL-00007" summary="UseCase + Semi-random stream generator">
+      <created>1610504490774</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610504490775</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -290,7 +347,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Stream" />
+    <MESSAGE value="Plotting, file lock, attribute selection display, access attribute by name." />
+    <MESSAGE value="Plots" />
+    <MESSAGE value="Filters" />
+    <MESSAGE value="Models" />
+    <MESSAGE value="UseCase + Semi-random stream generator" />
+    <MESSAGE value="fixup! UseCase + Semi-random stream generator" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixup! UseCase + Semi-random stream generator" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$pyweka.coverage" NAME="pyweka Coverage Results" MODIFIED="1609932549282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
