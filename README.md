@@ -1,8 +1,6 @@
 # About
 A project for the Data Mining and Machine Learning course at University of Pisa, implementing a tool to detect fraudulent transactions.
 
-# ReadMe file
-
 # MONEY GUARD
 A service implemented for the project of Data Mining and Machine Learning of the Artificial Intelligence and Data Engineering Master Degree at University of Pisa.
 
