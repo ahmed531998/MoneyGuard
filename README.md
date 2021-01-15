@@ -26,6 +26,7 @@ From your Anaconda, PyCharm or similar environment, use the following commands f
 	(For Linux, just use pip install javabridge)
 4. pip install python-weka-wrapper3
 5. pip install matplotlib (optional)
+6. Run the script smote.py to install smote
 
 # How to run the application
 To run the application, you just have to run the “main.py” module from an Anaconda terminal or Pycharm.
