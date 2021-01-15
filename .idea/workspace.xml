@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55b23413-56c0-4cb0-b8f3-b5bbb5c1c76e" name="Default Changelist" comment="UseCase + Semi-random stream generator">
+    <list default="true" id="55b23413-56c0-4cb0-b8f3-b5bbb5c1c76e" name="Default Changelist" comment="models">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explore.py" beforeDir="false" afterPath="$PROJECT_DIR$/explore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filters/discretizer" beforeDir="false" afterPath="$PROJECT_DIR$/filters/discretizer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filters/remover" beforeDir="false" afterPath="$PROJECT_DIR$/filters/remover" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/filters/stn" beforeDir="false" afterPath="$PROJECT_DIR$/filters/stn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generateModels.py" beforeDir="false" afterPath="$PROJECT_DIR$/generateModels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plots/category.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,6 +262,7 @@
       <workItem from="1610628446049" duration="12230000" />
       <workItem from="1610662479489" duration="7717000" />
       <workItem from="1610684411516" duration="3316000" />
+      <workItem from="1610693733285" duration="6766000" />
     </task>
     <task id="LOCAL-00001" summary="Added Stream">
       <created>1610216790085</created>
@@ -321,7 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610505975938</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="UseCase + Semi-random stream generator">
+      <created>1610693906902</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610693906902</updated>
+    </task>
+    <task id="LOCAL-00010" summary="models">
+      <created>1610696812993</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610696813006</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,14 +382,15 @@
     <MESSAGE value="Models" />
     <MESSAGE value="fixup! UseCase + Semi-random stream generator" />
     <MESSAGE value="UseCase + Semi-random stream generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="UseCase + Semi-random stream generator" />
+    <MESSAGE value="models" />
+    <option name="LAST_COMMIT_MESSAGE" value="models" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pythonProject$pyweka.coverage" NAME="pyweka Coverage Results" MODIFIED="1609932549282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MoneyGuard$pyweka.coverage" NAME="pyweka Coverage Results" MODIFIED="1610055535313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$dbconn.coverage" NAME="dbconn Coverage Results" MODIFIED="1609777457672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$arffGenerator__copy_.coverage" NAME="arffGenerator (copy) Coverage Results" MODIFIED="1609860546404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MoneyGuard$main.coverage" NAME="main Coverage Results" MODIFIED="1610690588536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MoneyGuard$main.coverage" NAME="main Coverage Results" MODIFIED="1610694307854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MoneyGuard$explore.coverage" NAME="explore Coverage Results" MODIFIED="1610658260154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$main.coverage" NAME="main Coverage Results" MODIFIED="1609777713337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pythonProject$prova.coverage" NAME="prova Coverage Results" MODIFIED="1609863369992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

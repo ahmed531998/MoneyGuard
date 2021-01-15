@@ -47,7 +47,6 @@ def resample(data, smotePerc, underPerc, over, under):
 
 
 def discretize(data, index, file):
-    #cmdIndex = ','.join(indecies)
     discretizer = Filter(classname='weka.filters.supervised.attribute.Discretize',
                          options=["-R", str(index), "-precision", "6"])
     discretizer.inputformat(data)
@@ -201,40 +200,40 @@ def main():
     # naive bayes - cross validate - traintestSplit
     print("----------NaiveBayes----------")
     classifier.set_property("classifier", base1.jobject)
-    # classify(preProcessedData,classifier,True,'models/naiveBayes.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData,classifier,True,'models/naiveBayes.model',splitPerc=70,randomSeed=10)
     classify(preProcessedData,classifier,False,'models/naiveBayes.model',splitPerc=70,randomSeed=10)
 
     # random forest - cross validate - traintestSplit
     print("----------RandomForest----------")
     classifier.set_property("classifier", base2.jobject)
-    #classify(preProcessedData,classifier,True,'models/randomForest.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData,classifier,True,'models/randomForest.model',splitPerc=70,randomSeed=10)
     classify(preProcessedData, classifier, False, 'models/randomForest.model', splitPerc=70, randomSeed=10)
 
     # decision tree (with pruning) - cross validate - traintestSplit
     print("----------DecisionTree----------")
     classifier.set_property("classifier", base3.jobject)
-    # classify(preProcessedData,classifier,True,'models/prunedJ48.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData,classifier,True,'models/prunedJ48.model',splitPerc=70,randomSeed=10)
     classify(preProcessedData,classifier,False,'models/prunedJ48.model',splitPerc=70,randomSeed=10)
-    #
-    # # decision tree (without pruning) - cross validate - traintestSplit
+
+    # decision tree (without pruning) - cross validate - traintestSplit
     print("----------DecisionTreeUnpruned----------")
     classifier.set_property("classifier", base4.jobject)
-    # classify(preProcessedData,classifier,True,'models/unprunedJ48.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData,classifier,True,'models/unprunedJ48.model',splitPerc=70,randomSeed=10)
     classify(preProcessedData,classifier,False,'models/unprunedJ48.model',splitPerc=70,randomSeed=10)
 
     # Hoeffding tree - cross validate - traintestSplit
     print("----------HoeffdingTree----------")
-    #classify(preProcessedData,base5,True,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData,base5,True,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
     classify(preProcessedData,base5,False,'models/HoeffdingTree.model',splitPerc=70,randomSeed=10)
 
     # K-Nearest-Neighbours - cross validate - traintestSplit
-    #print("----------KNN----------")
-    #classifier.set_property("classifier", base6.jobject)
-    #classify(preProcessedData,classifier,False,'models/knn.model',splitPerc=70,randomSeed=10)
-    #classify(preProcessedData, classifier, True, 'models/preProcessedJ48.model', splitPerc=70, randomSeed=10)
+    print("----------KNN----------")
+    classifier.set_property("classifier", base6.jobject)
+    classify(preProcessedData,classifier,False,'models/knn.model',splitPerc=70,randomSeed=10)
+    classify(preProcessedData, classifier, True, 'models/preProcessedJ48.model', splitPerc=70, randomSeed=10)
 
     # bayesian belief networks - cross validate - traintestSplit
     print("----------BayesianBelief----------")
     classifier.set_property("classifier", base7.jobject)
-    # classify(preProcessedData, classifier, True, 'models/bayesianBelief.model', splitPerc=70, randomSeed=10)
+    classify(preProcessedData, classifier, True, 'models/bayesianBelief.model', splitPerc=70, randomSeed=10)
     classify(preProcessedData, classifier, False, 'models/bayesianBelief.model', splitPerc=70, randomSeed=10)
