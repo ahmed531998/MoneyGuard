@@ -7,9 +7,10 @@ A service implemented for the project of Data Mining and Machine Learning of the
 # Additional files to download
 
 Since they were too big to be uploaded on Github, here are the links to the files required to run the application:
-1. Dataset: https://drive.google.com/file/d/1X2CRd03MF5aj_UiC6tjUcYw3keM6Az4S/view?usp=sharing
-2. Random Forest model (optional): https://drive.google.com/file/d/1MASosyvPb0nm8Gp69NkfdNZauRoxTFJV/view?usp=sharing
-3. KNN model (not used in the application): https://drive.google.com/file/d/1o32XIOWbGBx-I_u-KSnXr_j5JwIkdumW/view?usp=sharing
+1. Dataset (arff): https://drive.google.com/file/d/1X2CRd03MF5aj_UiC6tjUcYw3keM6Az4S/view?usp=sharing
+2. Dataset (csv) : https://drive.google.com/file/d/1ejtO5gLcssz_A8HjbPr-QZ-z9Vu_4Imo/view?usp=sharing
+3. Random Forest model (optional): https://drive.google.com/file/d/1MASosyvPb0nm8Gp69NkfdNZauRoxTFJV/view?usp=sharing
+4. KNN model (not used in the application): https://drive.google.com/file/d/1kj-iWtVBDAux1w1uUcSVV2mkTXZh3jgT/view?usp=sharing
 
 Random Forest model is not required, because it can be generated very quickly, but the download is suggested. KNN model is not used in the application, but for the sake of completeness we’ve included all the models we’ve worked with. If you want to have it as well, it is highly recommended to download the model from this link, because generate the model takes hours.
 The models have to be inserted in the “models” folder of the application; the dataset file should be included in a “dataSources” folder (that has to be created) in the main directory of the application.
